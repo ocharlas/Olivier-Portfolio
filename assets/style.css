@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  background-color: rgba(255, 99, 71, 1);
+  overflow: hidden;
+  opacity: 0.9;
+}
+nav {
+  background-color: rgb(209, 173, 126);
+  margin: 0 auto;
+  width: 100%;
+  height: 44px;
+  position: fixed;
+  animation: fade 3s ease-in;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+nav img {
+  height: 40px;
+  position: fixed;
+  opacity: 0.9;
+}
+nav img:hover {
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+}
+
+.fa-linkedin {
+  float: right;
+  color: black;
+  opacity: 0.6;
+  font-size: 2.2rem;
+  padding: 5px;
+  margin-right: 10px;
+}
+.fa-github {
+  float: right;
+  color: black;
+  opacity: 0.6;
+  font-size: 2.2rem;
+  padding: 5px;
+  margin-right: 30px;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+  opacity: 0.85;
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+}
+.container {
+  margin: 0 auto;
+  background-color: tomato;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  max-width: 1000px;
+  padding: 0;
+
+}
+
+.bigbox {
+  background-color: rgb(209, 173, 126);
+  height: 60%;
+  width: 80%;
+  max-height: 1200px;
+  max-width: 860px;
+  display: grid;
+  margin: auto;
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 100px;
+  grid-auto-flow: column;
+  grid-auto-rows: min-content;
+  overflow-x: scroll;
+  animation: drop 0.75s ease-in-out 0.01s;
+}
+@keyframes drop {
+  0% {
+    max-height: 0%;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+.box {
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+@keyframes fromleft {
+  0% {
+    width: 1%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.box img:hover {
+  opacity: 0.5;
+  transition: ease-in-out opacity 0.2s;
+  filter: drop-shadow(10px 10px 4px black);
+}
+
+.box a:active {
+  opacity: 0.7;
+}
+.box.box2 {
+  background-color: black;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  height: 256px;
+  max-height: 300px;
+  max-width: 400px;
+  animation: fromleft 1.5s ease-in 0.65s;
+  animation-fill-mode: backwards;
+}
+.box img {
+  background-size: cover;
+  max-width: 100%;
+  min-height: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+.box.box3 {
+  background-color: black;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  height: 256px;
+  max-width: 400px;
+  max-height: 300px;
+  animation-name: fromleft, hang;
+  animation-duration: 1.5s, 3s; 
+  animation-timing-function: ease-in, ease-in-out;
+  animation-delay: 0.65s, 19s;
+  animation-fill-mode: backwards, forwards;
+  z-index: 3;
+}
+
+@keyframes hang {
+  0% {
+    transform: rotate(0); 
+  }
+
+  10% {
+    transform: rotate(8deg);
+    transform-origin: bottom left;
+  }
+  100%{
+    transform: rotate(8deg);
+    transform-origin: bottom left;
+  }
+}
+
+.box.box5 {
+  background-color: black;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  height: 256px;
+  max-width: 400px;
+  max-height: 300px;
+  animation: fromleft 1.5s ease-in 0.65s;
+  animation-fill-mode: backwards;
+}
+
+.box.box4 {
+  background-color: black;
+  max-width: 400px;
+  max-height: 300px;
+  height: 256px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  animation-name: lazy, ouch;
+  animation-duration: .395s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2.16s, 19.2s;
+  animation-iteration-count: 24, 1;
+  animation-fill-mode: backwards, forwards;
+  overflow: hidden;
+  z-index: 2;
+  /*animation: lazy 0.395s ease-in-out 2.16s;*/
+}
+
+@keyframes ouch {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+
+  }
+  100% {
+    transform: rotate(1deg);
+    transform-origin: bottom left;
+  }
+}
+@keyframes lazy {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@keyframes fonzie {
+  0% {
+    width: 33%;
+  }
+  100% {
+    width: 99%;
+  }
+}
+
+@keyframes fixed {
+  0% {
+    width: 33%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* SLEAVE SITE CSS*/
+
+/* !!!BOT!!! */
+
+.animation {
+  position: relative;
+}
+
+.bot {
+  transform: scale(0.3);
+  z-index: 9;
+  display: block;
+  position: absolute;
+  right: 200%;
+  margin-top: -365px;
+  animation: robot-entry 3.5s ease 4s both;
+  -webkit-transform: scale(0.3) scaleX(1);
+}
+
+@keyframes robot-entry {
+  0% {
+    right: -100%;
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    right: 20%;
+    opacity: 0;
+  }
+}
+
+.bot2 {
+  transform: scale(0.3);
+  z-index: 9;
+  position: absolute;
+  right: 21%;
+  margin-top: -365px;
+  animation: robot-turn 2s ease-in 7.5s both;
+}
+@keyframes robot-turn {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bot3 {
+  transform: scale(0.3);
+  z-index: 9;
+  position: absolute;
+  right: 21%;
+  margin-top: -365px;
+  display: block;
+  opacity: 0;
+  animation: hammer 1s ease 9.5s backwards;
+}
+
+@keyframes hammer {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bot4 {
+  transform: scale(0.3);
+  z-index: 9;
+  opacity: 0;
+  position: absolute;
+  right: 21%;
+  margin-top: -365px;
+  display: block;
+  animation: hammer 1s ease 10.5s both;
+}
+.bot5 {
+  transform: scale(0.3);
+  z-index: 9;
+  position: absolute;
+  right: 21%;
+  margin-top: -365px;
+  display: block;
+  opacity: 0;
+  animation: hammer 1s ease-in 11.5s both;
+}
+
+.bot6 {
+  transform: scale(0.3);
+  z-index: 9;
+  position: absolute;
+  right: 21%;
+  margin-top: -365px;
+  display: block;
+  opacity: 0;
+  animation: robotexit 4s ease-in 12.5s forwards;
+}
+
+@keyframes robotexit {
+  0% {
+    right: 20%;
+    opacity: 1;
+  }
+  40% {
+    right: 20%;
+    opacity: 1;
+  }
+  100% {
+    right: 150%;
+    opacity: 1;
+  }
+}
+/*
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  bottom: -60px;
+  opacity: 0.9;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+*/
