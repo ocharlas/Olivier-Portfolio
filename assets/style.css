@@ -21,6 +21,16 @@ body {
     display: block;
     visibility: visible;
   }   
+  .bot img,
+  .bot1 img,
+  .bot2 img,
+  .bot3 img,
+  .bot4 img,
+  .bot5 img,
+  .bot6 img{
+    transform: scale(.6);
+    margin-top: -25%;
+  }
 }
 @media only screen and (min-width:768px) {
   .mobile {
