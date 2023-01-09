@@ -2,26 +2,111 @@
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 768px) {
-  .bigbox {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-}
-
-.mobile {
-  background-image: url(./img/robot-front.png);
-  display: none;
-}
-
 body {
   margin: auto;
   background-color: rgba(255, 99, 71, .9);
   overflow: hidden;
   opacity: 0.9;
+}
+
+@media only screen and (max-width: 768px) {
+  .bigbox {
+    display: none;
+    visibility: hidden;
+  }
+  .animation {
+    display: block;
+  }
+  .mobile {
+    display: block;
+    visibility: visible;
+  }   
+}
+@media only screen and (min-width:768px) {
+  .mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+.mobile {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+
+.projectortop img {
+position: absolute;
+  max-width: 600px;
+  min-width: 300px;
+  z-index: 9;
+  animation: bottom 4s ease-in both;
+}
+
+@keyframes bottom {
+  0% {
+    margin-top: -10%;
+  }
+  40% {
+    margin-top: 1%;
+  }
+  
+  
+  50% {
+    margin-top: 1%;
+  }
+
+85% {
+  margin-top: 3%;
+}
+
+  100% {
+    margin-bottom: 0;
+ 
+  }
+}
+.projectorscreen img {
+  position: absolute;
+  max-width: 600px;
+  min-width: 300px;
+  z-index: 8;
+  animation: screen 4s ease-in both;
+}
+
+@keyframes screen {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.projectorbot img {
+  position: absolute;
+  max-width: 600px;
+  min-width: 300px;
+  z-index: 9;
+  animation: screen 4s ease-in both;
+}
+
+.pic1 img {
+  max-width: 62%;
+  margin: auto;
+  animation: pic1 1.5s ease 12.5s both;
+  position: fixed;
+  margin-top: 20%;
+  left: 15%;
+  z-index: 9;
+}
+
+@keyframes pic1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .9;
+  }
 }
 nav {
   background-color: rgb(209, 173, 126);
@@ -73,7 +158,6 @@ nav img:hover {
 }
 .container {
   margin: 0 auto;
-  
   display: grid;
   grid-template-columns: 1fr, 1fr;
   max-width: 1000px;
