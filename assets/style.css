@@ -58,8 +58,12 @@ body {
   }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1024px) {
   .mobile {
+    display: none;
+    visibility: hidden;
+  }
+  .slideshow {
     display: none;
     visibility: hidden;
   }
@@ -128,20 +132,76 @@ position: absolute;
   position: absolute;
   max-width: 100%;
   z-index: 7;
-  animation: screen 4s ease-in both;
+  
+  animation-name: screen, projectorshadow;
+  animation-duration: 4s, 4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: 0, 6s;
+  
 }
+@keyframes projectorshadow {
+  0% {
+    filter: drop-shadow(0 0 0 rgb(255, 255, 255, 0.0))
+  }
+  64%{
+    filter: drop-shadow(0 0 0 rgb(255, 255, 255, 0.0))
+  }
+  75% {
+    filter: drop-shadow(0 250px 45px rgba(255, 255, 255, 0));
+  }
+  100% {
+    filter: drop-shadow(0 150px 20px white);
+    
+  }
+  
+}
+/* SLIDESHOW */
 
-.pic1 img {
-  position: absolute;
-  max-width: 70%;
+.carousel {
+  display: inline;
   margin: auto;
-  margin-top: 25%;
+  margin-top: 30%;
   left: 15%;
-  z-index: 9;
-  animation: pic1 1.5s ease 12.5s both;
+  max-width: 70%;
+  max-height: 300px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 8;
+  animation: fadein1sec 1.5s ease 12.5s both;
 }
 
-@keyframes pic1 {
+.slideshow img{
+  width: 100%;
+  height: auto;
+  padding-bottom: 100px;
+  display: inline;
+  opacity: .9;
+  background-size: contain;
+}
+
+.slideshow img:hover {
+  opacity: .7;
+}
+.fa-solid {
+  display: block;
+  position: absolute;
+  z-index: 9;
+  color: rgba(51, 51, 51, 0.8);
+  margin-top: 50%;
+  font-size: 2rem;
+  filter: drop-shadow(0 350px 5px white);
+  animation: fadein1sec 1s ease 4s both;
+}
+
+.fa-arrow-right {
+margin-left: 95%;
+}
+.fa-arrow-left {
+  margin-right: 75%;
+}
+
+@keyframes fadein1sec {
   0% {
     opacity: 0;
   }
