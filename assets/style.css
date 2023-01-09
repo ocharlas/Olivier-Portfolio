@@ -9,6 +9,30 @@ body {
   opacity: 0.9;
 }
 
+/*SIDEWAYS ROBOT FIX*/
+
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+      .bot img,
+      .bot6 img{
+        transform: rotate(270deg);
+        margin-top: -50%;
+      }   
+    .bot img,
+    .bot1 img,
+    .bot2 img,
+    .bot3 img,
+    .bot4 img,
+    .bot5 img,
+    .bot6 img{
+      transform: scale(.6);
+      margin-top: -50%;
+    }
+  } 
+    
+
 @media only screen and (max-width: 768px), (max-width: 768px) and (-webkit-device-pixel-ratio: 3) {
   .bigbox {
     display: none;
@@ -33,6 +57,7 @@ body {
     margin-top: -50%;
   }
 }
+
 @media only screen and (min-width:768px) {
   .mobile {
     display: none;
