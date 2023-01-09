@@ -56,7 +56,7 @@ body {
 .projectortop img {
 position: absolute;
   max-width: 100%;
-  z-index: 9;
+  z-index: 7;
   animation: bottom 4s ease-in both;
 }
 
@@ -85,7 +85,7 @@ position: absolute;
 .projectorscreen img {
   position: absolute;
   max-width: 100%;
-  z-index: 8;
+  z-index: 6;
   animation: screen 4s ease-in both;
 }
 
@@ -102,7 +102,7 @@ position: absolute;
 .projectorbot img {
   position: absolute;
   max-width: 100%;
-  z-index: 9;
+  z-index: 7;
   animation: screen 4s ease-in both;
 }
 
@@ -131,6 +131,7 @@ nav {
   height: 44px;
   position: fixed;
   animation: fade 3s ease-in;
+  z-index: 8;
 }
 
 @keyframes fade {
