@@ -2,47 +2,72 @@
 <html>
   <head>
     <link href="assets/style.css" rel="stylesheet" />
+    <script src="./script.js"></script>
     <title>Olivier Charlas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
     <script
       src="https://kit.fontawesome.com/94eae0f34b.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <nav>
-      <a href="http://www.oliviercharlas.com/index.html"><img src="assets/img/navlogo.png" /></a>
-      <a target="_blank" href="https://github.com/ocharlas"><i class="fa-brands fa-github"></i></a>
-      <a target="_blank" href="https://www.linkedin.com/in/olivier-charlas-024022257/"><i class="fa-brands fa-linkedin"></i></a>
+    <nav id="my-nav">
+      <a href="http://www.oliviercharlas.com/index.html"
+        ><img src="assets/img/navlogo.png"
+      /></a>
+      <a target="_blank" href="https://github.com/ocharlas"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/olivier-charlas-024022257/"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
     </nav>
 
     <!--MOBILE VERSION-->
     <div class="mobile">
-      <div class ="projector">
-        <div class="projectortop"><img src="./assets/img/projector-top.png"/ ></div>
-        <div class="projectorscreen"><img src="./assets/img/projector-screen.png"/></div>
-        <div class="projectorbot"><img src="./assets/img/projector-bot.png"></div>
-
-    <!--MOBILE SLIDESHOW SECTION-->
-    <div class="carousel">
-    <div class="slideshow">
-        <a class="pic1" href="#"><img target="_blank" src="./assets/img/smithpic.png" /> </a>
+      <div class="projector">
+        <div class="projectortop">
+          <img src="./assets/img/projector-top.png"/ >
         </div>
-      <!--  <div class="slideshow">
-          <a class="pic2" href="#"><img target="_blank" src="./assets/img/sleavepic.png" /> </a>
+        <div class="projectorscreen">
+          <img src="./assets/img/projector-screen.png" />
+        </div>
+        <div class="projectorbot">
+          <img src="./assets/img/projector-bot.png" />
+        </div>
+
+        <!--MOBILE SLIDESHOW SECTION-->
+        <div class="carousel">
+          <div id="c-1" class="slideshow">
+            <a class="pic1" href="#"
+              ><img target="_blank" src="./assets/img/smithpic.png" />
+            </a>
           </div>
-          <div class="slideshow">
-            <a class="pic3" href="#"><img target="_blank" src="./assets/img/grantpic.png" /> </a>
-            </div>
-            <div class="slideshow">
-              <a class="pic4" href="#"><img target="_blank" src="./assets/img/capstone.png" /> </a>
-              </div>
-            -->
-            </div>
+          <div id="c-2" class="slideshow">
+            <a class="pic2" href="#"
+              ><img target="_blank" src="./assets/img/sleavepic.png" />
+            </a>
           </div>
-            
-                          <a class="arrows" href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                          <a class="arrows" href="#"><i class="fa-solid fa-arrow-left"></i></a>
+          <div id="c-3" class="slideshow">
+            <a class="pic3" href="#"
+              ><img target="_blank" src="./assets/img/grantpic.png" />
+            </a>
+          </div>
+          <div id="c-4" class="slideshow">
+            <a class="pic4" href="#"
+              ><img target="_blank" src="./assets/img/capstone.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a class="arrows" id="arrow-right"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+      <a class="arrows" id="arrow-left" onclick="carouselLeft" href="#"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
 
     <!--DESKTOP VERSION-->
@@ -55,8 +80,7 @@
           <a href="#grants"><img src="assets/img/grantpic.png" /></a>
         </div>
         <div class="box box4">
-          <a  href="#captone"
-            ><img src="assets/img/capstone.png"/></a>
+          <a href="#captone"><img src="assets/img/capstone.png" /></a>
         </div>
         <div class="box box5">
           <a href="#sleave"><img src="assets/img/sleavepic.png" /></a>
